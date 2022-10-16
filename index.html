@@ -8,9 +8,8 @@
   <meta name="keywords" content="restaurant, healthy food, healthy breakfast, healthy food restaurant in kandy">
   <meta name="author" content="Shafeeq Ahmed">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-  <!-- <link rel="stylesheet" href="styles.css"/> -->
+  <link rel="stylesheet" href="styles.css"/>
   <title>One Green Restaurant</title>
-<!-- Test styling. It will be removed later -->
   <style>
     .fa-solid.fa-moped {
       font-size: 100px;
@@ -20,8 +19,9 @@
 
 <body>
   <header id="header">
-    <!-- Log image -->
-    <img src="" alt="" id="header-img"/>
+    <!-- Logo image -->
+    <img src="https://png.pngtree.com/png-clipart/20220719/original/pngtree-food-logo-png-image_8366750.png" alt="One Gree Restaurant Logo" id="header-img"/>
+    <h1 id="title">One Green Restaurant</h1>
     <nav id="nav-bar">
       <ul>
         <li><a href="#about-us" class="nav-link">About Us</a></li>
@@ -29,13 +29,12 @@
         <li><a href="#menu" class="nav-link">Menu</a></li>
       </ul>
     </nav>
-    <h1 id="title">One Green Restaurant</h1>
   </header>
   <section id="about-us">
     <h2>About Us</h2>
     <p>We are a restaurant who provides healthy meals for our consumers. We have been operational since late 2021. In addition to dining in, we also provide take away food. Moreover, we do home delivery.</p>
 
-    <div id="specialities">
+    <div class="specialities">
       <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
       <div class="description">
         <h3>Faster Delivery</h3>
@@ -43,16 +42,16 @@
       </div>
     </div>
 
-    <div id="specialities">
-      <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+    <div class="specialities">
+      <div class="icon"><i class="fa-solid fa-user-check"></i></i></div>
       <div class="description">
         <h3>Exceptional Chefs</h3>
         <p>AWe believe in our exceptional employees who are well experienced and have master the art of culinary.</p>
       </div>
     </div>
 
-    <div id="specialities">
-      <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+    <div class="specialities">
+      <div class="icon"><i class="fa-solid fa-heart"></i></i></div>
       <div class="description">
         <h3>Healthy but Tasety</h3>
         <p>Our food is not only healthy but also tasty. Healthy food no longer have to taste bad.</p>
@@ -69,53 +68,64 @@
 
   <section id="menu">
     <h2>Menu</h2>
-    <div class="menu-card">
-      <h3>Healthy Breakfast</h3>
-      <span class="price">$50</span>
-      <ul class="package-items">
-        <li>Turkey Sandwitch</li>
-        <li>Peanut Butter Banana Smoothie</li>
-        <li>Baked French Fries</li>
+    <div id="menu-cards">
+
+      <div class="menu-card">
+        <h3>Healthy Breakfast</h3>
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-200511-seo-club-sandwich-h-14383-eb-1590780714.jpg?crop=0.667xw:1.00xh;0.109xw,0&resize=640:*" alt="picture of tureky sandwitch on a plate" class="menu-img"/>
+        <span class="price">$50</span>
+        <ul class="package-items">
+          <li>Turkey Sandwitch</li>
+          <li>Peanut Butter Banana Smoothie</li>
+          <li>Baked French Fries</li>
+          <button class="order-button">Order</button>
+        </ul>
+      </div>
+  
+      <div class="menu-card">
+        <h3>Healthy Lunch</h3>
+        <img src="https://handletheheat.com/wp-content/uploads/2014/01/Easy-Steak-Salad-SQUARE.jpg" class="menu-img"/>
+        <span class="price">$60</span>
+        <ul class="package-items">
+          <li>Grilled Stake with Salad</li>
+          <li>Sweet Potatos</li>
+          <li>Fresh Juice of your choice</li>
+          <button class="order-button">Order</button>
+        </ul>
+      </div>
+  
+      <div class="menu-card">
+        <h3>Healthy Dinner</h3>
+        <img src="https://www.theresespoon.com/wp-content/uploads/2020/02/DSC_9162-A23-scaled.jpg" class="menu-img"/>
+        <span class="price">$75</span>
+        <ul class="package-items">
+          <li>Sesame beef with gochujang udon noodles</li>
+          <li>Fresh Juice of your choice</li>
+          <li>Banana oat muffine</li>
+        </ul>
         <button class="order-button">Order</button>
-      </ul>
-    </div>
-
-    <div class="menu-card">
-      <h3>Healthy Lunch</h3>
-      <span class="price">$60</span>
-      <ul class="package-items">
-        <li>Grilled Stake with Salad</li>
-        <li>Fresh Juice of your choice</li>
+      </div>
+  
+      <div class="menu-card">
+        <h3>Custom Order</h3>
+        <img src="https://media.glamour.com/photos/6232428d3cd68a607606b849/master/w_2667,h_1500,c_limit/factor%20healthy%20meal%20delivery.png" class="menu-img"/>
+        <span class="price"> Price Varies</span>
+        <p>In addition to our hand-picked packages, you can also make custom order (mix things up) from our ever-expanding menu. Click the button below to select your custom food preference and make an order.</p>
         <button class="order-button">Order</button>
-      </ul>
-    </div>
-
-    <div class="menu-card">
-      <h3>Healthy Dinner</h3>
-      <span class="price">$75</span>
-      <ul class="package-items">
-        <li>Sesame beef with gochujang udon noodles</li>
-        <li>Fresh Juice of your choice</li>
-        <li>Banana oat muffine</li>
-      </ul>
-      <button class="order-button">Order</button>
-    </div>
-
-    <div class="menu-card">
-      <h3>Custom Order</h3>
-      <span class="price">Varies</span>
-      <p>In addition to our hand-picked packages, you can also make custom order (mix things up) from our ever-expanding menu. Click the button below to select your custom food preference and make an order.</p>
-      <button class="order-button">Order</button>
+      </div>
     </div>
 
   </section>
 
-  <form id="form" action="https://www.freecodecamp.com/email-submit">
-    <label for="email" id="email-label">
-      Email <input type="email" id="email" placeholder="example@email.com" name="email"/>
-    </label>
-    <input type="submit" id="submit" value="Submit!"/>
-  </form>
+  <section id="news-letter">
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+      <label for="email" id="email-label">
+        Email <input type="email" id="email" placeholder="example@email.com" name="email"/>
+      </label>
+      <input type="submit" id="submit" value="Submit!"/>
+    </form>
+  </section>
+
 
   <footer></footer>
 </body>

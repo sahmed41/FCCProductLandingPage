@@ -1,19 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Roboto+Condensed:wght@400;700&display=swap');
+
 :root {
   --bg-dark: #fcd303;
   --bg-light: #f5f3eb;
+  --bg-light-2: #d2d4d2;
+  --color-primary: #50524f;
+  /* --bg-light: #defac8; */
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  background-color: var(--bg-light);    
+  color: var(--color-primary);
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+}
+
+#header-img {
+  width: 100px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  /* top: -15px */
+} 
+
 #nav-bar {
-    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+  
+#nav-bar li {
+  list-style: none;
+  margin: auto;
+  height: 40px;
+}
+
+.nav-link {
+  /* display: block; */
+  /* width: 100%; */
+  height: 40px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--bg-light);
+  background-color: var(--color-primary);
+}
+
+#title {
+  font-family: 'Alkalami', sans-serif;
+  color: green;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Section Styles */
+
+section {
+    width: 100%;
+    /* margin: 30px auto 50px auto; */
+    padding: 30px 10%;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section p {
+  margin: 10px 0 20px 0;
+  text-align: center;
+}
+
+.specialities {
+  display: flex;
+  gap: 15px;
+}
+
+.specialities p {
+  text-align: left;
+}
+
+.specialities:nth-of-type(1) {
+  margin-top: 40px;
+}
+
+.specialities:nth-of-type(3) {
+  gap: 23px;
+}
+
+.fa-solid {
+  font-size: 3em;
+  color: var(--bg-dark);
+}
+
+#our-operations, #news-letter {
+  background-color: var(--color-primary);
+  color: var(--bg-light) !important; 
+}
+
+#video {
+  width: 100%;
+}
+
+#menu h2 {
+  margin: 0 0 20px 0;
+}
+
+.menu-card {
+  width: 60%;
+  margin: 20px auto;
+  background-color: var(--bg-light-2);
+  padding: 15px 0;
+}
+
+.menu-card h3 {
+  text-align: center;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 1.3em;
+}
+
+.menu-card .menu-img {
+  display: block;
+  width: 90%;
+  margin: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.menu-card .price {
+  display: block;
+  margin: 15px 0 15px 0;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: 30px;
+}
+
+
+.menu-card li {  
+  margin: 15px 0 15px 0;
+  list-style: none;
+  text-align: center;
+  height: 30px;
+}
+
+.order-button {
+  display: block;
+  height: 30px;
+  width: 100px;
+  margin: auto;
+  font-size: 1.1em;
+  outline: none;
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--bg-light);
+}
+
+.menu-card p {
+  width: 90%;
+  margin: 15px auto;
+  text-align: justify;
+}
+
+
+/* Media Query */
+  
+@media (min-width: 768px) {
+  #header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
     position: fixed;
     top: 0;
   }
 
-section {
-    width: 100%;
-    height: 100vh;
-}
+  #header-img {
+    position: relative;
+    margin: initial;
+  }
+
+  #title {
+    width: 40%;
+    height: 100%;
+    padding-top: 30px;
+  }
+
+  #nav-bar {
+    width: 40%;
+    height: 100%;
+  }
   
-@media (min-width: 960px) {
+  #nav-bar ul {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-bar li {
+    display: initial;
+    width: 33%;
+    height: 100%;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .nav-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Section */
+ 
+  section:nth-of-type(1) {
+    margin-top: 130px;
+  }
+
+  section {
+    width: 100%;
+    /* height: 100vh; */
+    /* margin: auto; */
+    padding: 30px0 20%;
+  }
+
+  section h2 {
+    font-size: 2em;
+  }
+
+  section h3 {
+    font-size: 1.5em;
+  }
+
+  section p {
+    font-size: 1.3em;
+  }
+
+  .specialities {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .specialities:nth-of-type(1) {
+    margin-top: 100px;
+  }
+
+  #video {
+    display: block;
+    width: 60%;
+    margin: auto;
+  }
+
+  #menu-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #menu .menu-card {
+    width: 30%;
+  }
+
+  #menu li {
+    font-size: 1.3em;
+  }
 
 }
