@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,8 +23,12 @@ body {
 
 #header {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-dark);  
+  position: fixed;
+  top: 0;
+  
 }
 
 #header-img {
@@ -47,8 +51,8 @@ body {
 }
 
 .nav-link {
-  /* display: block; */
-  /* width: 100%; */
+  display: block;
+  width: 100%;
   height: 40px;
   padding-top: 10px;
   text-decoration: none;
@@ -73,6 +77,10 @@ section {
     width: 100%;
     /* margin: 30px auto 50px auto; */
     padding: 30px 10%;
+}
+
+section:nth-of-type(1) {
+  margin-top: 300px;
 }
 
 section h2 {
@@ -216,12 +224,13 @@ section p {
 /* Footer */
 
 #footer {
-  height: 50px;
+  /* height: 50px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: var(--bg-dark);
+  flex-direction: column;
 }
 
 .fa-brands {
@@ -232,8 +241,21 @@ section p {
 
 
 /* Media Query */
+@media (min-width: 720px)  {
   
-@media (min-width: 768px) {
+  #nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #nav-bar ul li {
+    width: 33%;
+  }
+}
+
+  
+@media (min-width: 960px) {
   #header {
     width: 100%;
     flex-direction: row;
@@ -289,12 +311,19 @@ section p {
     margin-top: 130px;
   }
 
-  section {
+  section:not(:last-of-type) {
     width: 100%;
-    /* height: 100vh; */
+    min-height: 100vh;
     /* margin: auto; */
     padding: 30px0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
   }
+
+ 
 
   section h2 {
     font-size: 2em;
@@ -320,7 +349,7 @@ section p {
   #video {
     display: block;
     width: 60%;
-    margin: auto;
+    margin: 50px auto;
   }
 
   #menu-cards {
@@ -343,7 +372,11 @@ section p {
     display: inline-block;
   }
 
-  
+  /* Footer */
+  #footer {
+    flex-direction: row;
+  }
   
 
 }
+
