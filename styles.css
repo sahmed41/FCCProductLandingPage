@@ -52,6 +52,7 @@ body {
   height: 40px;
   padding-top: 10px;
   text-decoration: none;
+  color: var(--color-primary);
 }
 
 .nav-link:hover {
@@ -103,6 +104,7 @@ section p {
 .fa-solid {
   font-size: 3em;
   color: var(--bg-dark);
+  vertical-align: middle;
 }
 
 #our-operations, #news-letter {
@@ -174,6 +176,59 @@ section p {
   margin: 15px auto;
   text-align: justify;
 }
+
+/* Subscription section */
+#news-letter form {
+  display: flex;
+  flex-direction: column;
+}
+
+#news-letter form  p {
+  margin: 10px auto;
+}
+
+#inputs {
+  width: 60%;
+  margin: auto;
+}
+
+
+#news-letter form #email {
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 10px;
+  margin: 10px auto;
+}
+
+#submit {
+  width: 100%;
+  height: 30px;
+  margin: 10px auto;
+  font-size: 1.1em;
+  background-color: var(--bg-light);
+  color: var(--color-primary);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Footer */
+
+#footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-dark);
+}
+
+.fa-brands {
+  font-size: 2em;
+  margin: 0 6px;
+}
+
 
 
 /* Media Query */
@@ -281,5 +336,14 @@ section p {
   #menu li {
     font-size: 1.3em;
   }
+
+  /* Subscription section */
+  #news-letter form #email, #submit {
+    width: 40%;
+    display: inline-block;
+  }
+
+  
+  
 
 }
